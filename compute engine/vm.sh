@@ -50,3 +50,9 @@ gcloud compute instances create --machine-type=f1-micro test-micro
 #Connect to compute VM from gcloud 
 
 gcloud compute ssh test2 --zone=us-east1-c
+
+#Get Inforamtion about VM
+
+curl -H "Metadata-Flavor:Google" metadata.google.internal/computeMetadata/v1/instance/name
+
+ssh-keygen -t RSA
